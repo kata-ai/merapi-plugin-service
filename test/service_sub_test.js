@@ -5,7 +5,7 @@ const expect = chai.expect;
 const request = require("supertest");
 const express = require("express");
 const bodyParser = require("body-parser");
-const sleep = require("then-sleep");
+const sleep = require("sleep-promise");
 
 const merapi = require("merapi");
 const component = require("merapi/component");
