@@ -1,6 +1,6 @@
 {
   "name": "merapi-plugin-service",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Provide microservice interface",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,7 @@
     "merapi": "^0.15.1",
     "redis": "^2.6.2",
     "request": "^2.74.0",
+    "request-promise": "^4.2.1",
     "to-snake-case": "^1.0.0"
   },
   "devDependencies": {
