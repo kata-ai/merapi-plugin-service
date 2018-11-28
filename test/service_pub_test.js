@@ -213,7 +213,7 @@ describe("Merapi Plugin Service: Publisher", function () {
             app.use(bodyParser.urlencoded({ extended: true }));
             app.use(bodyParser.json());
 
-            app.post("/hook/handle_new_message", function (req, res) {
+            app.post("/hooks/handle_new_message", function (req, res) {
                 count++;
                 res.json({ status: "ok" });
             });
@@ -223,7 +223,7 @@ describe("Merapi Plugin Service: Publisher", function () {
             yield sleep(50);
 
             let testService = yield testContainer.resolve("service");
-            let payload = { service: "yb-core", uri: "localhost:5554", hook: "/handle_new_message" };
+            let payload = { service: "yb-core", uri: "localhost:5554", hook: "handle_new_message" };
             let expectedResponse = { status: "ok" };
             yield request(testService._express).post("/events/message_incoming/subscribe")
                 .set("Accept", "application/json")
