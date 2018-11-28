@@ -1,11 +1,11 @@
 {
   "name": "merapi-plugin-service",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Provide microservice interface",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha",
-    "cover": "./node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -R spec"
+    "test": "./node_modules/.bin/mocha --exit",
+    "cover": "./node_modules/.bin/nyc node_modules/.bin/mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -30,9 +30,9 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^2.5.3",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
     "sleep-promise": "^2.0.0",
-    "supertest": "^1.2.0"
+    "supertest": "^3.3.0"
   }
 }
